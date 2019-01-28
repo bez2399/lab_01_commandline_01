@@ -14,11 +14,13 @@ Follow the instructions line-by-line.
 
 ==========
 2. Create a directory called mtec1002.
-----------
+-bash: mtec1002: command not found
 
 ==========
 3. Change your directory so that you're in mtec1002.
-----------
+-bash: cd: mtec1002: No such file or directory
+ent-v314-004:~ student$ 
+
 
 ==========
 4. Type:
