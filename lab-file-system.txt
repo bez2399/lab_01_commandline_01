@@ -14,12 +14,14 @@ Follow the instructions line-by-line.
 
 ==========
 2. Create a directory called mtec1002.
--bash: mtec1002: command not found
+student$ mkdir mtec1002
+mkdir: mtec1002: File exists
+ent-v314-005:~ student$ 
 
 ==========
 3. Change your directory so that you're in mtec1002.
--bash: cd: mtec1002: No such file or directory
-ent-v314-004:~ student$ 
+ent-v314-005:mtec1002 student$ 
+
 
 
 ==========
@@ -33,7 +35,8 @@ If it doesn't start at #1 again, or ask for help before moving on!
 
 Copy and paste the output of pwd below.
 ----------
-
+/Users/student/mtec1002
+ent-v314-005:mtec1002 student$ 
 
 
 ==========
@@ -44,6 +47,11 @@ $ ls
 
 Copy and paste the output below.
 ----------
+mkdir: animals: File exists
+ent-v314-005:mtec1002 student$ 
+
+animals		food		mtec1002
+ent-v314-005:mtec1002 student$ 
 
 
 
@@ -55,7 +63,11 @@ $ ls
 
 Copy and paste the output below.
 ----------
+mkdir: food: File exists
+ent-v314-005:mtec1002 student$
 
+animals		food		mtec1002
+ent-v314-005:mtec1002 student$ 
 
 
 ==========
@@ -65,9 +77,9 @@ $ mkdir -p foo/bar/baz/qux
 $ ls
 
 Copy and paste the output below.
-----------
 
-
+animals		foo		food		mtec1002
+ent-v314-005:mtec1002 student$ 
 
 ==========
 8. Type:
@@ -76,18 +88,19 @@ $ cd foo/bar/baz/qux
 $ pwd
 
 Copy and paste the output below.
-----------
 
+/Users/student/mtec1002/foo/bar/baz/qux
+ent-v314-005:qux student$ 
 
-
-==========
 9. Type:
 
 $ cd ../..
 $ pwd
 
 Copy and paste the output below.
-----------
+
+/Users/student/mtec1002/foo/bar
+ent-v314-005:bar student$ 
 
 
 
@@ -98,7 +111,9 @@ $ cd -
 $ pwd
 
 Copy and paste the output below.
-----------
+
+/Users/student
+ent-v314-005:~ student$
 
 
  
@@ -110,7 +125,8 @@ $ pwd
 
 Copy and paste the output below.
 ----------
-
+/
+ent-v314-005:/ student$ 
 
 
 ==========
@@ -121,7 +137,10 @@ $ rmdir animals
 $ ls -l
 
 Copy and paste the first two lines from the output into the space below.
-----------
+
+total 93
+drwxrwxr-x+ 122 root       admin  4148 Jan 29 11:59 Applications
+drwxr-xr-x    4 root       wheel   136 Jan  9 12:51 Developer
 
 
 
@@ -133,7 +152,8 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
-
+/Users/student
+ent-v314-005:~ student$ 
 
 
 ==========
@@ -143,7 +163,9 @@ $ cd /Volumes
 $ pwd
 
 Copy and paste the output into the space below.
-----------
+
+/Volumes
+ent-v314-005:Volumes student$ 
 
 
 
@@ -154,7 +176,12 @@ $ cd /unknown_folder
 $ pwd
 
 Copy and paste the output into the space below.
-----------
+
+ent-v314-005:Volumes student$ cd /unknown_folder
+-bash: cd: /unknown_folder: No such file or directory
+ent-v314-005:Volumes student$ pwd
+/Volumes
+ent-v314-005:Volumes student$ 
 
 
 
@@ -165,7 +192,11 @@ $ cd ~/mtec1002
 $ pwd
 
 Copy and paste the output into the space below.
-----------
+
+ent-v314-005:Volumes student$ cd ~/mtec1002
+ent-v314-005:mtec1002 student$ pwd
+/Users/student/mtec1002
+ent-v314-005:mtec1002 student$ 
 
 
 
@@ -177,13 +208,14 @@ $ hostname
 Copy and paste the output into the space below.
 ----------
 
-
+ent-v314-005.local
+ent-v314-005:mtec1002 student$ 
 
 ==========
 17a. Make sure you're back in your mtec1002, which should be in your home folder.  What command would you use to find out if you're in the right folder?  Write the command below, then run it.
 ----------
 
-
+pwd
 
 ==========
 17b. If you're not in the right directory, type the following command:
@@ -204,7 +236,8 @@ strawbery
 lemon
 
 Use only one command to make all of these new directories.  Write what command you used below:
-----------
+
+mkdir -p
 
 
 
@@ -214,13 +247,18 @@ Use only one command to make all of these new directories.  Write what command y
 Write the command you used to create the directory below:
 ----------
 
+ent-v314-005:mtec1002 student$ mkdir -p aardvark
 
 
 ==========
 20. List the files and directories in the current directory using the long format.  
 
 What is the modified date of the aardvark directory?
-----------
+
+ent-v314-005:mtec1002 student$ mkdir -p aardvark
+ent-v314-005:mtec1002 student$ ls
+aardvark	foo		mtec1002
+animals		food		pineapple
 
 
 
@@ -232,7 +270,9 @@ What is the modified date of the aardvark directory?
 * baz should be inside bar
 
 What command did you use?
-----------
+
+mkdir -p foo/bar/baz
+
 
 
 
@@ -240,7 +280,8 @@ What command did you use?
 22. Change your directory so that you're in the inner most directory (baz)
 
 What command did you use?
-----------
+
+cd baz
 
 
 
@@ -248,12 +289,14 @@ What command did you use?
 23. Change your directory so that you're two directories up (foo)
 
 What command did you use?
-----------
+
+cd foo
 
 
 ==========
 24. What command is used to delete empty directories?
-----------
+
+rmdir
 
 
 
@@ -265,28 +308,33 @@ What command did you use?
 
 ==========
 26. What flag do I pass to ls to print out all files?
-----------
+
+ls -a
 
 
 
 ==========
 27. What's the shortcut for home directory?
-----------
+
+~
 
 
 
 ==========
 28. What's a pathname?
-----------
+
+the general form of the name of a file or directory/ specifies a unique location in a file system
 
 
 
 ==========
 29. What's a directory?
-----------
+
+a cateloging structure on a file system that refrences other files (and directories)
 
 
 
 ==========
 30. What's the *absolute* path (full path, starting at root) to your user's Downloads directory?
-----------
+
+/Users/username/Downloads
